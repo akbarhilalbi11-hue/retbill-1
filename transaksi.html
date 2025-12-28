@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Transaksi - DriveNow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light py-5">
+    <div class="container">
+        <div class="card shadow border-0 mx-auto p-4" style="max-width: 500px; border-radius: 15px;">
+            <h4 class="fw-bold text-center mb-4 text-primary">Input Sewa Baru</h4>
+            <input type="text" id="custName" class="form-control mb-3" placeholder="Nama Pelanggan">
+            
+            <select id="carModel" class="form-select mb-3" onchange="hitungTotal()">
+                <option value="" data-harga="0">-- Pilih Mobil --</option>
+                <option value="Honda Civic RS" data-harga="1200000">Honda Civic RS (1.2jt)</option>
+                <option value="Toyota Fortuner VRZ" data-harga="1500000">Toyota Fortuner VRZ (1.5jt)</option>
+                <option value="BMW 320i Sport" data-harga="3500000">BMW 320i Sport (3.5jt)</option>
+                <option value="Toyota Alphard" data-harga="2800000">Toyota Alphard (2.8jt)</option>
+                <option value="Pajero Sport" data-harga="1400000">Pajero Sport (1.4jt)</option>
+            </select>
+
+            <div class="row mb-3">
+                <div class="col-6">
+                    <label class="small fw-bold">Durasi (Hari)</label>
+                    <input type="number" id="rentDays" class="form-control" value="1" min="1" oninput="hitungTotal()">
+                </div>
+                <div class="col-6">
+                    <label class="small fw-bold">Tanggal</label>
+                    <input type="date" id="rentDate" class="form-control">
+                </div>
+            </div>
+
+            <div class="alert alert-primary d-flex justify-content-between">
+                <span>Total Bayar:</span>
+                <span id="displayTotal" class="fw-bold">Rp 0</span>
+            </div>
+            
+            <button onclick="saveOrder()" class="btn btn-primary w-100 fw-bold">SIMPAN TRANSAKSI</button>
+            <a href="beranda.html" class="btn btn-link w-100 text-muted">Batal</a>
+        </div>
+    </div>
+
+    <script>
+        function hitungTotal() {
+            const sel = document.getElementById('carModel');
+            const hrg = sel.options[sel.selectedIndex].getAttribute('data-harga');
+            const hari = document.getElementById('rentDays').value;
+            const total = hrg * hari;
+            document.getElementById('displayTotal').innerText = "Rp " + total.toLocaleString('id-ID');
+            return total;
+        }
+
+        function saveOrder() {
+            const n = document.getElementById('custName').value;
+            const m = document.getElementById('carModel').value;
+            const h = document.getElementById('rentDays').value;
+            const t = document.getElementById('rentDate').value;
+            const tot = hitungTotal();
+
+            if(n && m && t) {
+                let db = JSON.parse(localStorage.getItem('UAS_FINAL_DB')) || [];
+                db.push({ nama: n, mobil: m, hari: h, tgl: t, total: tot });
+                localStorage.setItem('UAS_FINAL_DB', JSON.stringify(db));
+                alert("Transaksi Berhasil Dicatat!");
+                window.location.href = 'daftar_transaksi.html';
+            } else { alert("Data tidak lengkap!"); }
+        }
+    </script>
+</body>
+</html>

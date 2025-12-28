@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Unit - RetBill Executive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .car-card { transition: transform 0.3s; border-radius: 20px; overflow: hidden; }
+        .car-card:hover { transform: translateY(-10px); }
+        .car-img { height: 230px; object-fit: cover; }
+        .badge-premium { position: absolute; top: 15px; right: 15px; background: #ffc107; color: #000; padding: 5px 15px; border-radius: 50px; font-weight: bold; font-size: 12px; }
+    </style>
+</head>
+<body class="bg-light">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm px-3">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold text-primary" href="beranda.html">DRIVENOW <span class="text-white">EXECUTIVE</span></a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuUtama">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuUtama">
+            <ul class="navbar-nav ms-auto text-center">
+                <li class="nav-item"><a class="nav-link px-3" href="beranda.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="katalog.html">Katalog</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="transaksi.html">Booking</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="profile.html">Profile CEO</a></li>
+                <li class="nav-item"><a class="nav-link px-3 text-warning fw-bold border-top mt-2 mt-lg-0 border-lg-0" href="daftar_transaksi.html">CEK DATA TRANSAKSI</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Executive Fleet Selection</h1>
+            <p class="text-muted">Pilih kendaraan yang mencerminkan kesuksesan Anda.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card car-card border-0 shadow">
+                    <span class="badge-premium">BEST SELLER</span>
+                    <img src="civicRS2024.jpg" class="car-img" alt="Civic">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Honda Civic RS 2024</h5>
+                        <p class="small text-muted">Mesin Turbo 1.5L, Desain Aerodinamis, Teknologi Honda Sensing.</p>
+                        <ul class="list-unstyled small mb-4">
+                            <li>✔️ Full Leather Seat</li>
+                            <li>✔️ Premium Audio System</li>
+                        </ul>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-primary fw-bold fs-5">Rp 1.200.000/Day</span>
+                            <a href="transaksi.html" class="btn btn-primary btn-sm rounded-pill px-3">Sewa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card car-card border-0 shadow">
+                    <img src="toyotafortuner.jpg" class="car-img" alt="Fortuner">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Toyota Fortuner VRZ</h5>
+                        <p class="small text-muted">SUV Tangguh dengan suspensi empuk, cocok untuk perjalanan dinas luar kota.</p>
+                        <ul class="list-unstyled small mb-4">
+                            <li>✔️ Diesel Power</li>
+                            <li>✔️ 4x2 Automatic</li>
+                        </ul>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-primary fw-bold fs-5">Rp 1.500.000/Day</span>
+                            <a href="transaksi.html" class="btn btn-primary btn-sm rounded-pill px-3">Sewa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card car-card border-0 shadow">
+                    <span class="badge-premium">ULTRA LUXURY</span>
+                    <img src="bmw320i.jpg" class="car-img" alt="BMW">
+                    <div class="card-body">
+                        <h5 class="fw-bold">BMW 320i M-Sport</h5>
+                        <p class="small text-muted">Definisi kemewahan Jerman dengan handling presisi dan interior futuristik.</p>
+                        <ul class="list-unstyled small mb-4">
+                            <li>✔️ Sunroof & Ambient Light</li>
+                            <li>✔️ Driving Assistant</li>
+                        </ul>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-primary fw-bold fs-5">Rp 3.500.000/Day</span>
+                            <a href="transaksi.html" class="btn btn-primary btn-sm rounded-pill px-3">Sewa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card car-card border-0 shadow">
+                    <img src="alphardtoyota.jpg" class="car-img" alt="Alphard">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Toyota Alphard Gen-3</h5>
+                        <p class="small text-muted">Kabin pesawat di jalan raya. Solusi terbaik untuk perjalanan VIP keluarga.</p>
+                        <ul class="list-unstyled small mb-4">
+                            <li>✔️ Captain Seat</li>
+                            <li>✔️ Dual Power Sliding Door</li>
+                        </ul>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-primary fw-bold fs-5">Rp 2.800.000/Day</span>
+                            <a href="transaksi.html" class="btn btn-primary btn-sm rounded-pill px-3">Sewa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card car-card border-0 shadow">
+                    <img src="pajerosport.jpg" class="car-img" alt="Pajero">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Mitsubishi Pajero Sport</h5>
+                        <p class="small text-muted">Eksterior Dynamic Shield yang gagah dengan mesin MIVEC yang sangat bertenaga.</p>
+                        <ul class="list-unstyled small mb-4">
+                            <li>✔️ 8-Speed Automatic</li>
+                            <li>✔️ Electric Parking Brake</li>
+                        </ul>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-primary fw-bold fs-5">Rp 1.400.000/Day</span>
+                            <a href="transaksi.html" class="btn btn-primary btn-sm rounded-pill px-3">Sewa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0">RetBill Executive Fleet &copy; 2025</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
